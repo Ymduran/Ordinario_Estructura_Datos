@@ -182,22 +182,23 @@ def ejecutar_batalla_naval() -> None:
     :return:
     """
 
-    barcos =0
+    barcos = 0
     opcion = menu_jugabilidad()
-    dificultad = menu_modo_juego()
-    if dificultad == 1:
-        barcos = 3
-    elif dificultad == 2:
-        barcos = 5
-    elif dificultad == 3:
-        barcos = 10
+    if opcion != 3:
+        dificultad = menu_modo_juego()
+        if dificultad == 1:
+            barcos = 3
+        elif dificultad == 2:
+            barcos = 5
+        elif dificultad == 3:
+            barcos = 10
 
     if opcion == 1:
         tablero_jugador1 = crear_tablero()
-        colocar_barcos(tablero_jugador1,barcos,turno = 1)
+        colocar_barcos(tablero_jugador1, barcos, turno=1)
         tablero_jugador2 = crear_tablero()
-        colocar_barcos(tablero_jugador2,barcos,turno= 2)
-        alternar_tiros(tablero_jugador1,tablero_jugador2,barcos)
+        colocar_barcos(tablero_jugador2, barcos, turno=2)
+        alternar_tiros(tablero_jugador1, tablero_jugador2, barcos)
     elif opcion == 2:
         print("Modo Jugador vs CPU aún no implementado.")
     else:

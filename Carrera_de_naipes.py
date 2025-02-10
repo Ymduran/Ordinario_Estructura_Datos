@@ -96,7 +96,13 @@ def jugar_carrera() -> None:
     ganador = None #Inicializa al ganador
 
     while not ganador: #mientras no haya ganador
-        carta = baraja.pop() #Elimina la primera carta de la baraja
+        if not baraja: #Sí la baraja está vacía
+            crear_baraja() #Vuelve a crear otra
+        else:
+            carta = baraja.pop() #Elimina la primera carta de la baraja
+
+
+
         cartas_fuera.append(carta[2]) #Después añade la carta a la lista de cartas jugadas
         if carta[1] in caballos: #Sí el palo de la carta está en los caballos
             caballos[carta[1]] += 1 #Avanza el caball

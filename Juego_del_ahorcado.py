@@ -67,7 +67,7 @@ def actualizar_progreso(palabra_adivinar, progreso, letra_usuario):
 
 def ejecutar_juego_ahorcado() -> None:
     # Lista de palabras
-    lista_palabras_adivinar = ["variable", "algoritmo", "prototipo", "compu"]
+    lista_palabras_adivinar = ["variable", "algoritmo", "prototipo", "esfuerzo","palabra","aleatoria","actualizar","internet","paradigmas","importante","esmerar","continuar","intento",]
 
     # Inicialización del juego
     palabra_adivinar, progreso = inicializar_juego(lista_palabras_adivinar)
