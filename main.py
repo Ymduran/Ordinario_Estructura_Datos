@@ -27,8 +27,9 @@ def menu_principal() -> int:
     Función que muestra el menú principal para seleccionar cualquier programa
     :return: Entero válido para validar el dato
     """
-
     print(Fore.LIGHTYELLOW_EX+"** MENÚ PRINCIPAL ** ")
+    print(Fore.CYAN+"1.- Carrera de naipes.")
+    print(Fore.RED+"2.- Batalla naval ")
     print(Fore.MAGENTA+"3.- Juego_del_gato. ")
     print(Fore.BLUE+"4.- Juego de Cuatro en raya. ")
     print(Fore.CYAN+"5.- Juego del ahorcado.")
@@ -52,9 +53,9 @@ if __name__ == '__main__':
         if opcion == 1:
             Calculadora_argumentos_variables.ejecutar_calculadora()
         elif opcion == 2:
-            Promedio_materias.ejecutar_promedio_materias()
+            Promedio_materias.ejecutar_carrera_de_naipes()
         elif opcion == 3:
-            Juego_del_gato.ejecutar_juego_del_gato()
+            Juego_del_gato.ejecutar_batalla_naval()
         elif opcion == 4:
             cuatro_en_raya.ejecutar_cuatro_en_raya()
         elif opcion == 5:
