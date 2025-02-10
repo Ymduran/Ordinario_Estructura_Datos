@@ -96,7 +96,7 @@ def jugar_carrera() -> None:
     ganador = None #Inicializa al ganador
 
     while not ganador: #mientras no haya ganador
-        carta = baraja.pop() #Elimina la primera carta de la baraja 
+        carta = baraja.pop() #Elimina la primera carta de la baraja
         cartas_fuera.append(carta[2]) #Después añade la carta a la lista de cartas jugadas
         if carta[1] in caballos: #Sí el palo de la carta está en los caballos
             caballos[carta[1]] += 1 #Avanza el caball
@@ -111,7 +111,7 @@ def jugar_carrera() -> None:
         input("Presiona [ENTER] para continuar")
 
     print(f"\nEl caballo {ganador} ha ganado la carrera! 🏆")
-    print("Cartas jugadas en la carrera:"| ' '.join(cartas_fuera)) #Muestra todas las cartas que jugaron
+    print("Cartas jugadas en la carrera:", ' '.join(cartas_fuera)) #Muestra todas las cartas que jugaron
 
     if ganador == eleccion:
         print("¡Felicidades! Tu caballo ganó la apuesta! :)")

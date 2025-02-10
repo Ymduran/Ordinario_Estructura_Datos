@@ -1,23 +1,23 @@
 from colorama import Fore
 
-import Calculadora_argumentos_variables
-import Promedio_materias
+import Carrera_de_naipes
+import Cuatro_en_raya
 import Juego_del_gato
-import cuatro_en_raya
-import juego_ahorcado
+import Juego_del_ahorcado
+import Batalla_naval
 
 print(Fore.GREEN+ "██╗░░░██╗██╗██████╗░███████╗░█████╗░░░░░░██╗██╗░░░██╗███████╗░██████╗░░█████╗░░██████╗")
-print(Fore.RED+   "██║░░░██║██║██╔══██╗██╔════╝██╔══██╗░░░░░██║██║░░░██║██╔════╝██╔════╝░██╔══██╗██╔════╝  ")
-print(Fore.CYAN+  "╚██╗░██╔╝██║██║░░██║█████╗░░██║░░██║░░░░░██║██║░░░██║█████╗░░██║░░██╗░██║░░██║╚█████╗░     ")
-print(Fore.YELLOW+"░╚████╔╝░██║██║░░██║██╔══╝░░██║░░██║██╗░░██║██║░░░██║██╔══╝░░██║░░╚██╗██║░░██║░╚═══██╗   ")
-print(Fore.BLUE+  "░░╚██╔╝░░██║██████╔╝███████╗╚█████╔╝╚█████╔╝╚██████╔╝███████╗╚██████╔╝╚█████╔╝██████╔╝     ")
-print(Fore.GREEN+ "░░░╚═╝░░░╚═╝╚═════╝░╚══════╝░╚════╝░░╚════╝░░╚═════╝░╚══════╝░╚═════╝░░╚════╝░╚═════╝░   ")
-print(Fore.RED+   " ███████╗███╗░░██╗  ██████╗░██╗░░░██╗████████╗██╗░░██╗░█████╗░███╗░░██╗  ")
-print(Fore.CYAN+  " ██╔════╝████╗░██║  ██╔══██╗╚██╗░██╔╝╚══██╔══╝██║░░██║██╔══██╗████╗░██║   ")
-print(Fore.YELLOW+" █████╗░░██╔██╗██║  ██████╔╝░╚████╔╝░░░░██║░░░███████║██║░░██║██╔██╗██║ ")
-print(Fore.BLUE+  " ██╔══╝░░██║╚████║  ██╔═══╝░░░╚██╔╝░░░░░██║░░░██╔══██║██║░░██║██║╚████║   ")
-print(Fore.GREEN+ " ███████╗██║░╚███║  ██║░░░░░░░░██║░░░░░░██║░░░██║░░██║╚█████╔╝██║░╚███║                  ")
-print(Fore.RED+   " ╚══════╝╚═╝░░╚══╝  ╚═╝░░░░░░░░╚═╝░░░░░░╚═╝░░░╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝                    ")
+print(Fore.RED+   "██║░░░██║██║██╔══██╗██╔════╝██╔══██╗░░░░░██║██║░░░██║██╔════╝██╔════╝░██╔══██╗██╔════╝")
+print(Fore.CYAN+  "╚██╗░██╔╝██║██║░░██║█████╗░░██║░░██║░░░░░██║██║░░░██║█████╗░░██║░░██╗░██║░░██║╚█████╗░   ")
+print(Fore.YELLOW+"░╚████╔╝░██║██║░░██║██╔══╝░░██║░░██║██╗░░██║██║░░░██║██╔══╝░░██║░░╚██╗██║░░██║░╚═══██╗ ")
+print(Fore.BLUE+  "░░╚██╔╝░░██║██████╔╝███████╗╚█████╔╝╚█████╔╝╚██████╔╝███████╗╚██████╔╝╚█████╔╝██████╔╝  ")
+print(Fore.GREEN+ "░░░╚═╝░░░╚═╝╚═════╝░╚══════╝░╚════╝░░╚════╝░░╚═════╝░╚══════╝░╚═════╝░░╚════╝░╚═════╝░ ")
+print(Fore.RED+   " ███████╗███╗░░██╗   ██████╗░██╗░░░██╗████████╗██╗░░██╗░█████╗░███╗░░██╗  ")
+print(Fore.CYAN+  " ██╔════╝████╗░██║   ██╔══██╗╚██╗░██╔╝╚══██╔══╝██║░░██║██╔══██╗████╗░██║   ")
+print(Fore.YELLOW+" █████╗░░██╔██╗██║   ██████╔╝░╚████╔╝░░░░██║░░░███████║██║░░██║██╔██╗██║ ")
+print(Fore.BLUE+  " ██╔══╝░░██║╚████║   ██╔═══╝░░░╚██╔╝░░░░░██║░░░██╔══██║██║░░██║██║╚████║   ")
+print(Fore.GREEN+ " ███████╗██║░╚███║   ██║░░░░░░░░██║░░░░░░██║░░░██║░░██║╚█████╔╝██║░╚███║                  ")
+print(Fore.RED+   " ╚══════╝╚═╝░░╚══╝   ╚═╝░░░░░░░░╚═╝░░░░░░╚═╝░░░╚═╝░░╚═╝░╚════╝░╚═╝░░╚══╝                    ")
 print(Fore.CYAN+  "                       ")
 
 
@@ -51,15 +51,15 @@ if __name__ == '__main__':
         opcion = menu_principal()
 
         if opcion == 1:
-            Calculadora_argumentos_variables.ejecutar_calculadora()
+            Carrera_de_naipes.jugar_carrera()
         elif opcion == 2:
-            Promedio_materias.ejecutar_carrera_de_naipes()
+            Batalla_naval.ejecutar_batalla_naval()
         elif opcion == 3:
-            Juego_del_gato.ejecutar_batalla_naval()
+            Juego_del_gato.ejecutar_juego_del_gato()
         elif opcion == 4:
-            cuatro_en_raya.ejecutar_cuatro_en_raya()
+            Cuatro_en_raya.ejecutar_cuatro_en_raya()
         elif opcion == 5:
-            juego_ahorcado.ejecutar_juego_ahorcado()
+            Juego_del_ahorcado.ejecutar_juego_ahorcado()
         elif opcion == 6:
             print("Saliendo, Gracias por jugar. :) ...")
             break
