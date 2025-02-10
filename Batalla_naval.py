@@ -91,7 +91,7 @@ def colocar_barcos(tablero,barcos,turno) -> None:
         limpiar()
         contador += 1
         mostrar_tablero(tablero)
-        print(f"Truno de jugador {turno} de colocar barcos")
+        print(f"Turno de jugador {turno} de colocar barcos")
         while True:
             entrada = input("Elige fila y columna (formato: fila columna): ").split()
             if len(entrada) == 2 and all(x.isdigit() for x in entrada):
@@ -114,7 +114,7 @@ def colocar_bombas(tablero_tiros,turno) -> None:
         limpiar()
         contador += 1
         mostrar_tablero(tablero_tiros)
-        print(f"Truno de jugador {turno}")
+        print(f"Turno de jugador {turno}")
         while True:
             entrada = input("Elige fila y columna (formato: fila columna): ").split()
             if len(entrada) == 2 and all(x.isdigit() for x in entrada):

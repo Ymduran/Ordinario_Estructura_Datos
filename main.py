@@ -30,7 +30,7 @@ def menu_principal() -> int:
     print(Fore.LIGHTYELLOW_EX+"** MENÚ PRINCIPAL ** ")
     print(Fore.CYAN+"1.- Carrera de naipes.")
     print(Fore.RED+"2.- Batalla naval ")
-    print(Fore.MAGENTA+"3.- Juego_del_gato. ")
+    print(Fore.MAGENTA+"3.- Juego del gato. ")
     print(Fore.BLUE+"4.- Juego de Cuatro en raya. ")
     print(Fore.CYAN+"5.- Juego del ahorcado.")
     print(Fore.RED+"6.- Salir. ")

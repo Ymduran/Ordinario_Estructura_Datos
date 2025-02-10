@@ -99,7 +99,6 @@ def jugar_vs_jugador() -> None:
     Modo de juego: Jugador contra Jugador.
     :return:
     """
-
     tablero = crear_tablero()
     turno = 0
     fichas = ["X", "O"]
@@ -107,31 +106,35 @@ def jugar_vs_jugador() -> None:
     while True:
         limpiar()
         mostrar_tablero(tablero)
-        ficha_actual = fichas[turno % 2]        # ................................ Se va intercalando la ficha.
+        ficha_actual = fichas[turno % 2]
         print(f"Turno del jugador {turno % 2 + 1} ({ficha_actual})")
 
-        columna = 1
-        while columna < 0 or columna >= 7:
+        while True:
             entrada = input("Elige una columna (1-7): ")
-            if entrada.isdigit():               # ................................ .isdigit varifica que el dato ingresado es un número.
+            if entrada.isdigit():
                 columna = int(entrada) - 1
-                if columna < 0 or columna >= 7:
+                if 0 <= columna < 7:
+                    if colocar_ficha(tablero, columna, ficha_actual):
+                        break
+                    else:
+                        print("Columna llena. Intenta otra vez.")
+                else:
                     print("La columna no existe. Intenta de nuevo.")
             else:
                 print("Entrada inválida. Por favor, ingresa un número entre 1 y 7.")
 
-        if not colocar_ficha(tablero, columna, ficha_actual):   # ................................ .Verifica que la columna tiene espacio de lo contrario pide otra columna .
-            print("Columna llena. Intenta otra vez.")
-            continue
-
         if verificar_victoria(tablero, ficha_actual):
+            limpiar()
             mostrar_tablero(tablero)
             print(f"¡Jugador {turno % 2 + 1} ({ficha_actual}) gana!")
+            input("Presiona Enter para continuar...")
             break
 
         if all(tablero[0][col] != " " for col in range(7)):
+            limpiar()
             mostrar_tablero(tablero)
             print("¡El juego termina en empate!")
+            input("Presiona Enter para continuar...")
             break
 
         turno += 1
