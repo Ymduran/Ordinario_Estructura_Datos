@@ -97,8 +97,8 @@ def jugar_carrera() -> None:
 
     while not ganador: #mientras no haya ganador
         if not baraja: #Sí la baraja está vacía
-            baraja = crear_baraja()
-            barajar(baraja)
+           crear_baraja()
+
         else:
             carta = baraja.pop() #Elimina la primera carta de la baraja
 
