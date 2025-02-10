@@ -1,7 +1,8 @@
 from colorama import Fore
 
 import Carrera_de_naipes
-import Cuatro_en_raya
+
+import Cuatro_raya
 import Juego_del_gato
 import Juego_del_ahorcado
 import Batalla_naval
@@ -57,7 +58,7 @@ if __name__ == '__main__':
         elif opcion == 3:
             Juego_del_gato.ejecutar_juego_del_gato()
         elif opcion == 4:
-            Cuatro_en_raya.ejecutar_cuatro_en_raya()
+            Cuatro_raya.ejecutar_cuatro_en_raya()
         elif opcion == 5:
             Juego_del_ahorcado.ejecutar_juego_ahorcado()
         elif opcion == 6:
